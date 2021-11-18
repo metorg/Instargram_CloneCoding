@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 @Data//Getter,Setter
 public class SignupDto {
 
-    @Size(min=2,max=20)
+    @Size(min = 2, max = 20)
     @NotBlank//백엔드에서도 막아줘야한다
     private String username;
     @NotBlank
@@ -20,12 +20,12 @@ public class SignupDto {
     @NotBlank
     private String name;
 
-    public User toEntity(){
+    public User toEntity() {
         return User.builder()
-        .username(username)
-        .password(password)
-        .email(email)
-        .name(name)
-        .build();
+                .username(username)
+                .password(password)
+                .email(email)
+                .name(name)
+                .build();
     }
 }
